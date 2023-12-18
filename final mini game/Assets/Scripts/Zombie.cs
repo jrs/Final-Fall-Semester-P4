@@ -28,6 +28,7 @@ public class Zombie : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             Debug.Log("The Zombie hit the player!");
+            GameObject.Find("Game Manager").GetComponent<GameManager>().GameOver();
         }
     }
 }
