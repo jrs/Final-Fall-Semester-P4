@@ -13,8 +13,8 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         //SpawnEnemyObject();
-        StartCoroutine(SpawnRandomAmountOfEnemies());
-        SpawnCollectibleObject();
+        //StartCoroutine(SpawnRandomAmountOfEnemies());
+        //SpawnCollectibleObject();
     }
 
     // Update is called once per frame
@@ -59,5 +59,10 @@ public class SpawnManager : MonoBehaviour
                 Instantiate(enemyObject, RandomSpawnPosition(), enemyObject.transform.rotation);
             }
         } 
+    }
+
+    public void StartCreatingZombies()
+    {
+        StartCoroutine(SpawnRandomAmountOfEnemies());
     }
 }
